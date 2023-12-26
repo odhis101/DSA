@@ -1,0 +1,25 @@
+# Linked List Cycle Detection
+
+## Failed Attempt: Checking Length
+
+# I initially attempted to detect a cycle by checking if the length of the linked list is odd or even. Here's the code for the failed attempt in Python:
+
+''' python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+# Flawed logic: Checking if the length is odd or even to detect a cycle
+def has_cycle_flawed(head):
+    length = 0
+
+    # Calculate the length of the linked list
+    current = head
+    while current:
+        length += 1
+        current = current.next
+
+    # Check if the length is odd or even
+    return length % 2 != 0
+''' 
