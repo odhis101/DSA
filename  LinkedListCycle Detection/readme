@@ -23,3 +23,41 @@ def has_cycle_flawed(head):
     # Check if the length is odd or even
     return length % 2 != 0
 ''' 
+
+# The code above fails for all linked list
+
+
+# Explanation: 
+
+#Cycle Detection:
+
+#The task is to detect if there is any cycle in the linked list, meaning that traversing through the nodes will eventually lead back to a node that has already been visited.
+
+# The Solution: 
+''' python
+Two-Pointer Approach:
+
+The common and efficient approach to solve this problem is to use the "two-pointer" technique.
+Initialize two pointers, often referred to as "slow" and "fast," initially pointing to the head of the linked list.
+Move the "slow" pointer one step at a time and the "fast" pointer two steps at a time.
+If there is a cycle, the fast pointer will eventually catch up to the slow pointer, indicating the presence of a cycle.
+If there is no cycle, the fast pointer will reach the end of the list.
+
+'''
+
+# psuedo code: 
+'''
+function hasCycle(head):
+    if head is null or head.next is null:
+        return false
+
+    Initialize slow and fast pointers to head and head.next, respectively
+
+    while slow is not equal to fast:
+        if fast is null or fast.next is null:
+            return false
+        Move slow one step forward
+        Move fast two steps forward
+
+    Return true (a cycle is detected)
+'''
