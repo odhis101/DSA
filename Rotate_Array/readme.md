@@ -38,4 +38,26 @@ Step 3 (Reverse the Remaining Elements):
 
 Reverse the remaining elements (from index k to the end). This ensures that the rest of the array is flipped back to its correct order.
 
+function rotateArray(nums, k):
+    n = length(nums)
+
+    # Handle the case where k is larger than the array size
+    k = k % n
+
+    # Helper function to reverse a portion of the array
+    reverse(arr, start, end):
+        while start < end:
+            arr[start], arr[end] = arr[end], arr[start]
+            start += 1
+            end -= 1
+
+    # Reverse the entire array
+    reverse(nums, 0, n - 1)
+
+    # Reverse the first k elements
+    reverse(nums, 0, k - 1)
+
+    # Reverse the remaining elements
+    reverse(nums, k, n - 1)
+
 
