@@ -35,3 +35,6 @@ function isValidParentheses(s):
         right -= 1
 
     return True
+
+
+This isnt the proper way of doing it, we are to try use stacks 
