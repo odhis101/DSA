@@ -31,3 +31,6 @@ function compressString(chars):
                 write_ptr += 1
 
     return write_ptr
+
+
+    this solution is in 0(1) time 
