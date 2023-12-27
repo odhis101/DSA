@@ -26,3 +26,16 @@ function rotateArray(nums, k):
 time complexity 
 0(k*n)
 
+However there is a better more effecient way of solving this 
+
+Step 1 (Reverse the Entire Array):
+
+Reverse the entire array. This is equivalent to rotating the array by n positions, where n is the length of the array. The entire array is flipped.
+Step 2 (Reverse the First k Elements):
+
+Reverse the first k elements. Now, the first k elements are in their correct rotated positions, and the rest of the array remains flipped.
+Step 3 (Reverse the Remaining Elements):
+
+Reverse the remaining elements (from index k to the end). This ensures that the rest of the array is flipped back to its correct order.
+
+
