@@ -38,3 +38,28 @@ function isValidParentheses(s):
 
 
 This isnt the proper way of doing it, we are to try use stacks 
+
+here is how we do it 
+
+For each character in the string:
+If it's an opening bracket ('(', '{', '['), push it onto the stack.
+If it's a closing bracket (')', '}', ']'):
+Check if the stack is empty. If it is, return False (unmatched closing bracket).
+Pop the top element from the stack.
+Check if the popped element is the corresponding opening bracket for the current closing bracket. If not, return False (mismatched brackets).
+
+
+function isValidParentheses(s):
+    stack = empty stack
+
+    for char in s:
+        if char is an opening bracket ('(', '{', '['):
+            push char onto stack
+        else if char is a closing bracket (')', '}', ']'):
+            if stack is empty:
+                return False  // Unmatched closing bracket
+            top = pop from stack
+            if top is not the corresponding opening bracket for char:
+                return False  // Mismatched brackets
+
+    return stack is empty  // True if all opening brackets are matched
