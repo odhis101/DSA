@@ -13,10 +13,8 @@ def longestCommonPrefix(strs):
     for i in range(len(first_word)):
         # Check if the current character is common to all words
         if all(word[i] == first_word[i] for word in strs):
-            # Append the character to the result string
             result += first_word[i]
         else:
-            # If characters differ, break the loop
             break
 
     return result
