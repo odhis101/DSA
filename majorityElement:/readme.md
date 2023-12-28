@@ -45,3 +45,24 @@ If the count is 0, we set the current element as the candidate.
 If the current element is the same as the candidate, we increment the count.
 If the current element is different from the candidate, we decrement the count.
 The candidate may be the majority element after the first pass.
+
+here is the psuedo code 
+
+function majorityElement(nums):
+    candidate = None
+    count = 0
+
+    # First pass: Find a potential majority element
+    for num in nums:
+        if count == 0:
+            candidate = num
+        count += 1 if num == candidate else -1
+
+    # Second pass: Verify if the candidate is the majority element
+    count = 0
+    for num in nums:
+        if num == candidate:
+            count += 1
+
+    # Check if the candidate is the majority element
+    return candidate if count > len(nums) // 2 else None
