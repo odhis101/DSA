@@ -76,3 +76,11 @@ function longestCommonPrefix(strs):
 
     # If no mismatch is found, return the entire first word as the common prefix
     return strs[0]
+Comparison with Your Logic:
+Your Logic:
+
+Your initial logic involved iterating over characters in the first word and comparing them with corresponding characters in other words.
+Optimized Approach:
+
+The optimized approach uses the zip function to efficiently group characters from the same position together.
+It detects mismatches early and returns the common prefix up to the point of the mismatch.
