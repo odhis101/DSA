@@ -43,3 +43,18 @@ function threeSum(nums):
             seen.add(nums[j])
 
     return result
+
+
+Total time complexity 
+
+Sorting:
+
+The initial sorting of the array has a time complexity of O(n log n), where n is the length of the array.
+Nested Loop:
+
+The main nested loop iterates over each element in the array (O(n)).
+Within the nested loop, there is a set-based lookup operation and potentially a while loop for skipping duplicates.
+In the worst case, the while loop may iterate over all elements, but overall, it does not exceed O(n) iterations.
+Total Time Complexity:
+
+The total time complexity is dominated by the sorting step, which is O(n log n).
