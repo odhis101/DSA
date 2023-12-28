@@ -37,3 +37,22 @@ Let m be the length of the first word and n be the number of words in the array.
 The code iterates over each character in the first word and checks if it is common to all words, leading to a time complexity of O(m * n).
 Space Complexity:
 The space complexity is O(m) as we use the result string to store the common prefix, and the length of the result string will be at most the length of the first word
+
+
+There is an approach that is better than this one 
+
+Optimized Approach Explanation:
+Edge Case:
+
+Check if the array is empty. If it is, return an empty string since there is no common prefix.
+Use zip to Group Characters:
+
+Utilize the zip function to group characters from the same position together.
+Iterate Over Zipped Groups:
+
+Iterate over the zipped groups of characters.
+At each position, check if all characters in the group are the same.
+If a mismatch is found, return the common prefix up to this point.
+Return Result:
+
+If no mismatch is found, return the entire first word as the common prefix.
