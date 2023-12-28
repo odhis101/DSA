@@ -25,3 +25,5 @@ function majorityElement(nums):
     majority_element = max(count_dict, key=count_dict.get)
 
     return majority_element
+
+this solution is viable but cause of sorting it is done in 0 (n log n ) time 
