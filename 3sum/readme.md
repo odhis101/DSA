@@ -89,3 +89,52 @@ While moving the pointers, skip duplicate elements to avoid duplicate triplets.
 Return Result:
 
 Return the list of unique triplets.
+
+here is the psuedo code 
+
+function threeSum(nums):
+    # Edge case: If the array has less than three elements, return an empty list
+    if len(nums) < 3:
+        return []
+
+    # Sort the array
+    nums.sort()
+
+    # Initialize the result list
+    result = []
+
+    # Iterate through the array
+    for i in range(len(nums) - 2):
+        # Skip duplicates to avoid duplicate triplets
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
+
+        # Initialize two pointers
+        left, right = i + 1, len(nums) - 1
+
+        while left < right:
+            # Calculate the current sum
+            current_sum = nums[i] + nums[left] + nums[right]
+
+            if current_sum == 0:
+                # Add the triplet to the result list
+                result.append([nums[i], nums[left], nums[right]])
+
+                # Skip duplicates for both left and right pointers
+                while left < right and nums[left] == nums[left + 1]:
+                    left += 1
+                while left < right and nums[right] == nums[right - 1]:
+                    right -= 1
+
+                # Move the pointers
+                left += 1
+                right -= 1
+
+            elif current_sum < 0:
+                # Increase the sum by moving the left pointer to the right
+                left += 1
+            else:
+                # Decrease the sum by moving the right pointer to the left
+                right -= 1
+
+    return result
