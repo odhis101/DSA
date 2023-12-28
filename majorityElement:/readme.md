@@ -65,4 +65,4 @@ function majorityElement(nums):
             count += 1
 
     # Check if the candidate is the majority element
-    return candidate if count > len(nums) // 2 else None
+    return candidate if count > len(nums) // 2else None
