@@ -59,8 +59,6 @@ Total Time Complexity:
 
 The total time complexity is dominated by the sorting step, which is O(n log n).
 
-I am very comfortable with n log n complexity so i might not look for a more optimal solution 
-
 since its a study exercise i had research 
 
 there is a two pointer approach 
