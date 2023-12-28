@@ -60,3 +60,32 @@ Total Time Complexity:
 The total time complexity is dominated by the sorting step, which is O(n log n).
 
 I am very comfortable with n log n complexity so i might not look for a more optimal solution 
+
+since its a study exercise i had research 
+
+there is a two pointer approach 
+Two-Pointer Approach for 3Sum:
+Sort the Array:
+
+Start by sorting the array in ascending order. This allows us to efficiently use the two-pointer approach.
+Iterate Through the Array:
+
+Use a for loop to iterate through the array.
+For each element nums[i], initialize two pointers (left and right) at the next and last elements, respectively.
+Check for Duplicates:
+
+Skip duplicate elements for the outer loop to avoid duplicate triplets.
+Use Two Pointers:
+
+Move the left pointer forward and the right pointer backward, checking the sum of the three elements (nums[i], nums[left], nums[right]).
+Adjust Pointers Based on Sum:
+
+If the sum is equal to zero, add the triplet to the result.
+If the sum is less than zero, move the left pointer to the right.
+If the sum is greater than zero, move the right pointer to the left.
+Skip Duplicates:
+
+While moving the pointers, skip duplicate elements to avoid duplicate triplets.
+Return Result:
+
+Return the list of unique triplets.
