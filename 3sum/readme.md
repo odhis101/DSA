@@ -58,3 +58,5 @@ In the worst case, the while loop may iterate over all elements, but overall, it
 Total Time Complexity:
 
 The total time complexity is dominated by the sorting step, which is O(n log n).
+
+I am very comfortable with n log n complexity so i might not look for a more optimal solution 
