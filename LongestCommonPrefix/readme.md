@@ -29,3 +29,11 @@ function longestCommonPrefix(strs):
             break
 
     return result
+
+
+Complexity Analysis:
+Time Complexity:
+Let m be the length of the first word and n be the number of words in the array.
+The code iterates over each character in the first word and checks if it is common to all words, leading to a time complexity of O(m * n).
+Space Complexity:
+The space complexity is O(m) as we use the result string to store the common prefix, and the length of the result string will be at most the length of the first wo
