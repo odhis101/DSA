@@ -23,3 +23,16 @@ Consider the array height = [1,8,6,2,5,4,8,3,7]. Each element of the array repre
    #  #  #  #  #   #  #  #  #
    ---------------------------
    1  8  6  2  5  4  8  3  7
+
+
+this problem was difficult for me to undestand so i just googled and youtubed the solution 
+
+Approach Summary:
+Two-Pointer Technique:
+
+Initialize two pointers, left at the beginning and right at the end of the array.
+The idea is to explore different pairs of lines by moving the pointers towards each other.
+At each step, calculate the width (distance between the lines) and the container height (minimum height of the two lines).
+Calculate the area of the container using the formula area = width * container_height.
+Update a variable max_area to track the maximum area encountered.
+Move the pointers towards each other based on the logic of minimizing height while maximizing width.
