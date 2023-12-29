@@ -36,3 +36,27 @@ At each step, calculate the width (distance between the lines) and the container
 Calculate the area of the container using the formula area = width * container_height.
 Update a variable max_area to track the maximum area encountered.
 Move the pointers towards each other based on the logic of minimizing height while maximizing width.
+
+function max_area(height):
+    left = 0
+    right = len(height) - 1
+    max_area = 0
+
+    while left < right:
+        # Calculate width and container height
+        width = right - left
+        container_height = min(height[left], height[right])
+
+        # Calculate area
+        area = width * container_height
+
+        # Update max_area if the current area is greater
+        max_area = max(max_area, area)
+
+        # Move pointers
+        if height[left] < height[right]:
+            left += 1
+        else:
+            right -= 1
+
+    return max_area
