@@ -5,15 +5,12 @@ class MinStack:
         self.min_stack = []
 
     def push(self, x):
-        # If the stack is empty, push x onto both stacks
         if not self.main_stack:
             self.main_stack.append(x)
             self.min_stack.append(x)
         else:
-            # Compare with the current minimum
             current_min = self.min_stack[-1]
             if x <= current_min:
-                # Push x and the new minimum onto both stacks
                 self.main_stack.append(x)
                 self.min_stack.append(x)
             else:
@@ -38,3 +35,13 @@ class MinStack:
         if self.min_stack:
             return self.min_stack[-1]
         return None  # Stack is empty
+
+# Example Usage:
+min_stack = MinStack()
+min_stack.push(-2)
+min_stack.push(0)
+min_stack.push(-3)
+print(min_stack.get_min())  # Output: -3
+min_stack.pop()
+print(min_stack.top())      # Output: 0
+print(min_stack.get_min())  # Output: -2
