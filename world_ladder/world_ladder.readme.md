@@ -8,6 +8,8 @@ sk == endWord
 Given two words, beginWord and endWord, and a dictionary wordList, return all the shortest transformation sequences from beginWord to endWord, or an empty list if no such sequence exists. Each sequence should be returned as a list of the words [beginWord, s1, s2, ..., sk].
 
 
+Go to youtube to rewatch solutions of this problem 
+
 This is BFS solution you want to backtrack to reconstruct the paths 
 
 Here's a general outline of the approach:
