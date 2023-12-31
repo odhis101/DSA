@@ -28,3 +28,27 @@ Optimization:
 
 Instead of reconstructing paths from scratch, build paths incrementally during BFS.
 Use a queue of partial paths to efficiently explore and generate valid sequences.
+
+
+here is the psuedo code 
+
+function findLadders(beginWord, endWord, wordList):
+    result = []  # To store the final sequences
+    wordList = set(wordList)  # Convert wordList to a set for faster lookup
+    if endWord not in wordList:
+        return result  # No transformation sequence possible
+
+    # Helper function to build the graph during BFS
+    def buildGraph():
+        # Implementation to build the graph (adjacency list)
+        # ...
+
+    # Helper function to perform BFS and backtracking
+    def bfsAndBacktrack():
+        # Implementation of BFS and backtracking
+        # ...
+
+    # Call the BFS and backtracking function
+    bfsAndBacktrack()
+
+    return result
